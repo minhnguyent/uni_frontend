@@ -1,0 +1,24 @@
+.menu {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu-unit {
+        width: 93px;
+        text-align: center;
+        height: 50px;
+        border-radius: 10px;
+        border: solid 1px black;
+
+        &:hover {
+            color: red;
+            transform: scale(1.03);
+            cursor: pointer;
+            transition: .14s;
+        }
+    }
+}

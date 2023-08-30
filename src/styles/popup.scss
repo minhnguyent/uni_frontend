@@ -1,0 +1,97 @@
+.Cpop {
+
+    .Cpop_overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(1, 1, 1, 0.5);
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+    }
+
+    .Cpop_content {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.96);
+        width: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+        overflow-y: auto;
+        height: 100%;
+
+        .pop_exit {
+            text-align: center;
+            background-color: red;
+            float: right;
+            width: 40px;
+            height: 40px;
+            margin-right: 5px
+        }
+
+        .pop_tools {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 100px;
+            padding: 60px 0 20px;
+            border-bottom: solid black 1px;
+
+            .pop_search {
+                flex-basis: 200px;
+                padding-left: 50px
+            }
+
+            .pop_paginate {
+                background-color: red;
+                flex-basis: 200px;
+                flex-grow: 1;
+                max-width: 600px;
+            }
+
+
+        }
+
+        .pop_data {
+            overflow-y: auto;
+            padding: 10px 20px;
+
+            .pop_product {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding-top: 5px;
+
+                &:hover {
+                    border: solid 1px black;
+                    transition: .2s;
+                    transform: scale(1.02);
+                    opacity: .85;
+                    cursor: pointer;
+                }
+
+                .product-left {
+                    max-width: 200px;
+                    object-fit: contain;
+                    object-position: center;
+                    flex-basis: 200px;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                .product-right {
+                    flex-grow: 1;
+                    max-width: 700px;
+                }
+
+
+            }
+        }
+    }
+}
